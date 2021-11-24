@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react'
 import './ProviderDetail.css'
 
-let providerId = "619982387f896fab82246784"
+
 const SingleProvider = ({providerId}) => {
-    // let providerId ='619982387f896fab82246784'
-    const [provider,setProvider] = useState({ contactInfo: []})
+    
+        const [provider,setProvider] = useState({ contactInfo: []})
         const [contactInfo,setContactInfo] = useState('')
         const [accessLocation,setAccessLocation] = useState('')
         const [availible,setAvailible] = useState('')
@@ -12,19 +12,21 @@ const SingleProvider = ({providerId}) => {
     function onInputUpdate(event, setter){
         let newValue = event.target.value
         setter(newValue)
+        console.log(newValue)
     }
 
     function postData(){
         let newData ={
-            contactInfo,accessLocation,availible
+          contactInfo,accessLocation, availible
         }
-        fetch('/api/provider', {
+        console.log(newData)
+        fetch('/api/provider/'+providerId, {
             method:"POST",
             headers:{
-                'Content-Type': 'application.json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(newData)
-        })
+                    })
     }
       useEffect(()=>{
         const fetchProvider = async()=>{
@@ -53,13 +55,14 @@ const SingleProvider = ({providerId}) => {
             <div className="field-value">
                 <label>{provider.accessLocation}</label>
                 <input value = {accessLocation} onChange={(event) => onInputUpdate(event,setAccessLocation)}/>
+                {accessLocation}
                 </div>
             <div className ="field-title">Availible?</div>
             <div className ="field-value">
                 <label>True</label>
                 <input value = {availible} onChange={(event) => onInputUpdate(event,setAvailible)}/>
             </div>
-            <button margin ='auto' className ='field-value'>save</button>
+            <button margin ='auto' className ='field-value' onClick={postData}>save</button>
           </div> 
       </div>
     )
@@ -68,3 +71,4 @@ const SingleProvider = ({providerId}) => {
 
 
 export default SingleProvider;
+

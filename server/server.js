@@ -3,6 +3,7 @@ const giveAwayRoutes = require('./routes/giveAwayRoutes')
 
 const app = express()
 const port = 5000
+app.use(express.json())
 
 app.use('/api',giveAwayRoutes)
 

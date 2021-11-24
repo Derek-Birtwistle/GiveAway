@@ -20,8 +20,13 @@ async function listProvider(){
 async function findById(id){
    return Provider.findById(id)
 }
+async function updateProvider(id,newData){
+    return Provider.findByIdAndUpdate(id,newData)
+
+}
 module.exports = {
     createProvider,
     listProvider,
-    findById
+    findById,
+    updateProvider
 }

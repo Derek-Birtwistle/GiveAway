@@ -19,7 +19,7 @@ function App() {
      
        <ProviderList setSelectedProvider ={setSelectedProvider}/> 
        <ProviderDetail providerId={selectedProvider}/> 
-       <SingleProvider providerId={selectedProvider}/>
+       <SingleProvider providerId={selectedProvider} />
 
     </div>
   );

@@ -2,7 +2,7 @@
 import {useEffect, useState} from 'react'
 import './ProviderDetail.css'
 
-
+//the prop in the line below will point the forum to the desired provider
 const ProviderDetail = ({providerId}) => {
  
   
