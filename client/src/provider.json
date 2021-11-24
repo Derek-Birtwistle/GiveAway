@@ -1,0 +1,23 @@
+[
+{"name": "CO-OP",
+"address": "1234 5st Calgary AB",
+"contactInfo":["403 555-1234","John"],
+"accessLocation":"Loading Dock"
+},
+
+{"name": "Safeway",
+"address": "6789 10st Calgary AB",
+"contactInfo":["403 555-6789","Prince"],
+"accessLocation":"Loading Dock"
+},
+{"name": "Sobeys",
+"address": "666 6st Calgary AB",
+"contactInfo":["403 666-9999","Derek"],
+"accessLocation":"Loading Dock"
+},
+{"name": "Nofrills",
+"address": "8888 8st Calgary AB",
+"contactInfo":["403 555-5555","Tony"],
+"accessLocation":"Loading Dock"
+}
+]
