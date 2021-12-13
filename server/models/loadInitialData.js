@@ -1,5 +1,5 @@
 let providerList = require('./provider.json')
-let provdierModel = require('./giveAway')
+let provdierModel = require('./providerModel')
 
 providerList.forEach(async(provider)=>{
     console.log('Creating provider:',provider.name)
