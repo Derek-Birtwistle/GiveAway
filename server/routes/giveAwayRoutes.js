@@ -23,7 +23,6 @@ router.post('/provider/:id',async (req,res)=>{
     console.log (id)
     console.log(newData)
     let newProvider = await provdierModel.updateProvider(id,newData)
-    
     res.json(newProvider)
 })
 

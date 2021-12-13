@@ -5,7 +5,9 @@ const Provider = mongoose.model('Provider',
         "name": String,
         "address": String,
         "contactInfo":[String],
-        "accessLocation":String
+        "accessLocation":String,
+        "availible":String
+        
     }
 )
 
@@ -24,6 +26,7 @@ async function updateProvider(id,newData){
     return Provider.findByIdAndUpdate(id,newData)
 
 }
+
 module.exports = {
     createProvider,
     listProvider,

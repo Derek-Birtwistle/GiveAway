@@ -36,12 +36,14 @@ const SingleProvider = ({providerId}) => {
         }
         fetchProvider()
       },[providerId])
+      
     return(
       <div>
         <h2>{provider.name}</h2>
         <div className ="detail-fields">
             <div className ="field-title">Contact info
             </div>
+            <div>
             <ul className="field-value">
               {
                 provider.contactInfo.map((info,index)=>(
@@ -50,16 +52,15 @@ const SingleProvider = ({providerId}) => {
               }
                <input  value = {contactInfo} onChange = {(event) => onInputUpdate(event,setContactInfo)}/>
             </ul>
-           
+            </div>
             <div className ="field-title">Access Location</div>
             <div className="field-value">
-                <label>{provider.accessLocation}</label>
+                {/* <label>{provider.accessLocation}</label> */}
                 <input value = {accessLocation} onChange={(event) => onInputUpdate(event,setAccessLocation)}/>
-                {accessLocation}
-                </div>
+           </div>
             <div className ="field-title">Availible?</div>
             <div className ="field-value">
-                <label>True</label>
+                <label></label>
                 <input value = {availible} onChange={(event) => onInputUpdate(event,setAvailible)}/>
             </div>
             <button margin ='auto' className ='field-value' onClick={postData}>save</button>
